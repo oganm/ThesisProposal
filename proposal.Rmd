@@ -5,7 +5,7 @@ output:
       includes:
         in_header: import.sty
         before_body: title.sty
-      #  after_body: tail.sty
+        after_body: tail.sty
       keep_tex: yes
       number_sections: yes
       # toc: yes
@@ -22,29 +22,61 @@ library(knitr)
 
 # Motivation and Introduction
 
-Brain is a remarkably heterogeneus organ with a wide variety of cell types that can range from 
+Brain is a remarkably heterogeneous organ with a wide variety of cell types that can be very closely related (eg. neuronal subtypes) or highly differentiated from each other (eg. neurons and glial cells). Characterization of these cell types is an ongoing challenge in neuroscience. A common problem with characterization attempts stems from the fact that they often focus on a subset of cell types that a research group is interested in. Such studies often include electrophysiological measurements coupled with expression data and attempt to find defining characteristics of a given cell type [@sugino_molecular_2006]. Major issue with such studies is their limited scope. Such that a characteristic thought to be specific to a cell type in that study might be commonplace in other cell types that were not a part of the study.
 
-Large scale gene expression analyses constitute an important portion of studies focused on complex neurological disorders **(citations)**. Even with the recent rise of expression studies focusing on single cell types **(citations)**, a majority of such studies still use bulk tissue samples to identify differentially expressed genes **(citations)**. The main caveat of examining expression changes in whole tissues instead of single cell types is that a great deal of information is lost due to non homogeneous nature of the samples. Signals that are strong enough to be detected cannot be easily attributed to the cell types that is causing the effect, while weaker signals might not be detected at all due to uneffected cell types diluting it. Other groups attempted to attempted to capture cell type specific information by computational means in a variety of tissues, but in brain such efforts have largely been confined to major cell type groups, such as neurons, oligodendrocytes and astrocytes
+Another important problem is that even though the heterogeneity of brain is well known, most large scale expression studies that focus on neurological/neurodegenerative disorders use whole tissue samples to examine the effects of the diseases **(citations)**. Even though this approach remains popular due to its relative ease and low cost, it complicates the analysis of the results by obfuscating the source of observed differences (eg. which cell type(s) is effected by the changes) and making harder to detect changes in less abundant cell types due to signal dilution [@chikina_cellcode:_2015].
 
+We aim to solve the former problem by creating a highly inclusive database of cell type specific expression profiles. This database will be used to detect marker genes that that best represents a given cell type in a particular brain region that is likely to be biologically relevant. The genes that were discovered this way can shed light into characteristics of given cell types and be useful to neuroscientists who want to work on the cell type by being useful biomarkers. Through the markers we found, we partially want to solve the latter problem by using expression of marker genes as a surrogate proportion of given cell type. This will enable us to make previously unkown inferences from the whole tissue data to have a better understanding of the disease. Also we are hoping to use recently established methods [@chikina_cellcode:_2015] to use the estimated proportions to get more out of differential expression data.
 
-\lipsum
+A large amount of cell type specific data gathered by independent groups is available in GEO. Many of these samples are collected independently, using different methods from different mouse strains. Due inherent problems of using a dataset compiled from many different sources, significant effort has to be allocated to make sure the marker genes that were found are reliable. We will do this by analysing independent datasets to make sure marker genes behave as expected. Namely, in a whole tissue dataset, we will show that they are more co-expressed than the background and in single cell datasets they tend to occur in the same cells more frequently than a randomly selected gene set.
 
+<!-- Fix this part -->
+We also hope to make the entire dataset more accesible by creating a web app to visualize the data. The users will be able to see expression of genes in the cell types represented in the dataset.
 
+The pipeline for the project can be found in Figure \ref{fig:workflow}.
+
+<!-- An old version by ogan -->
+<!-- Large scale gene expression analyses constitute an important portion of studies focused on complex neurological disorders **(citations)**. Even with the recent rise of expression studies focusing on single cell types **(citations)**, a majority of such studies still use bulk tissue samples to identify differentially expressed genes **(citations)**. The main caveat of examining expression changes in whole tissues instead of single cell types is that a great deal of information is lost due to non homogeneous nature of the samples. Signals that are strong enough to be detected cannot be easily attributed to the cell types that is causing the effect, while weaker signals might not be detected at all due to unaffected cell types diluting it. Other groups attempted to attempted to capture cell type specific information by computational means in a variety of tissues, but in brain such efforts have largely been confined to major cell type groups, such as neurons, oligodendrocytes and astrocytes -->
 
 \newpage
+
+# Hypotheses and specific aims
+
+## Hypotheses
+
+### Hypothesis 1: 
+
+## Specific aims
+
+### Aim 1: Compilation of cell type specific expression database and make it available to third parties
+
+1. Gathering high quality gene expression data representing brain cell types
+2. Employing quality control measures to minimize intake of flawed data
+3. Making the data available in a web application
+
+### Aim 3: Identification and verification of marker genes
+
+1. Detecting cell type marker genes in a region dependent based on the localization of their expression
+2. Verify marker genes in independent datasets
+
+### Aim 4: Enumaration of cell type proportions
+
+1. Estimate cell types
+2. later
+
+# Background
+
+## Expression profiling
+
+## Cell type isolation
+
+## Cell type deconvolution
+
+### Reference based deconvolution
+
+### Reference free deconvolution
+
+
+
 # References
-
-
-\newpage
-
-# Figures
-
-
-\begin{figure}[here]
-\begin{center}
-  \includegraphics[height = 8in]{figures/[Ally] Sniper Female.png}
-  \caption{Workflow of the project}
-  \label{fig:workflow}
-\end{center}
-\end{figure}
 
