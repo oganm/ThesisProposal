@@ -1,9 +1,17 @@
 \usepackage{setspace}
-% this is a lorem ipsum generator for dummy 
+% this is a lorem ipsum generator for adding dummy texts
 \usepackage{lipsum}
 \usepackage{tocloft}
 % this makes list of figures appear in table of contents
 \usepackage[nottoc]{tocbibind}
 
-% this makes dots
+% this makes dots in table of contents
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+% to change the title of contents
+% \renewcommand{\contentsname}{Whatever}
+
+% line numbers for review purposes
+% this package might not be available in default latex installation 
+% get it by 'sudo tlmgr install lineno'
+%\usepackage{lineno}
+%\linenumbers
