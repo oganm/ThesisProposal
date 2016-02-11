@@ -16,18 +16,18 @@ fontsize: 11
 # csl: chicago-author-date.csl
 csl: nature.csl
 ---
-
+```{r include=FALSE, cache=FALSE}
+library(knitr)
+```
 
 # Motivation and Introduction
-
-## A new hope
 
 Brain is a remarkably heterogeneus organ with a wide variety of cell types that can range from 
 
 Large scale gene expression analyses constitute an important portion of studies focused on complex neurological disorders **(citations)**. Even with the recent rise of expression studies focusing on single cell types **(citations)**, a majority of such studies still use bulk tissue samples to identify differentially expressed genes **(citations)**. The main caveat of examining expression changes in whole tissues instead of single cell types is that a great deal of information is lost due to non homogeneous nature of the samples. Signals that are strong enough to be detected cannot be easily attributed to the cell types that is causing the effect, while weaker signals might not be detected at all due to uneffected cell types diluting it. Other groups attempted to attempted to capture cell type specific information by computational means in a variety of tissues, but in brain such efforts have largely been confined to major cell type groups, such as neurons, oligodendrocytes and astrocytes
 
 
-
+\lipsum
 
 
 
