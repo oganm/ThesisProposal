@@ -76,19 +76,22 @@ RNA microarray is the most common way to quantify RNA in a high-throughput manne
 
 ### RNA sequencing
 
-RNA sequencing is a much more recent method of RNA quantification. RNA sequencing is performed by sequencing of amplified cDNA that is acquired from a target transcriptome. Unlike microarrays they do not target specific locations on the genome hence can give a much comprehensive picture of the transcriptome including gene discovery and splicing variant identification. The quantification done by normalizing the number of reads found from a single transcript to the length of the transcript and to the total number of transcripts [@wang_rna-seq_2009]. More recently, 
+RNA sequencing (RNA seq) is a much more recent method of RNA quantification. RNA seq is performed by sequencing of amplified cDNA that is acquired from a target transcriptome. Unlike microarrays they do not target specific locations on the genome hence can give a much comprehensive picture of the transcriptome including gene discovery and splicing variant identification. The quantification done by normalizing the number of reads found from a single transcript to the length of the transcript and to the total number of transcripts [@wang_rna-seq_2009]. In general RNA seq is more prone to technical artifacts due to the schotasticity of the sequencing process **citation**. Increasing the sequencing depth and using unique labels for molecules before any amplification are ways developed to aleviate such artifacts. With development of microfluidics it became possible for RNA sequencing to be performed on single cells **citations**. Due to scarcity of the starting product, technical artifacts resulting from amplification and sequencing is more prominent **citation**. This can readily be observed by the high prominence of low signals in most single cell RNA-seq experiments **figure**
 
 
 
 ### Analysis of RNA quantification results
 
-A most common way that is sought in RNA quantification experiments is differential expression, 
+Most common use of RNA quantification is to observe differential expression between two or more groups. This is done in order to find what genes are effected by certain conditions or expression is different between different cell or tissue types. 
+
 
 ## Cell type isolation
 
 ## Cell type deconvolution
 
 ### Reference based deconvolution
+
+
 
 ### Reference free deconvolution
 
