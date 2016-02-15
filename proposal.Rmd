@@ -74,10 +74,18 @@ Proteins are the main functioning units in a cell. They are the ultimate product
 
 RNA microarray is the most common way to quantify RNA in a high-throughput manner and it's development have been a transformative force in many branches of biology [@hoheisel_microarray_2006]. Microarrays by fabricated by planting single strand probes, that are specific to a location on a target genome, in high density, to a known location on a solid surface. These probes will later be hybridized to a labeled cDNA library acquired by amplication of a target transcriptome. The amount of cDNA that hyrbidized to a probe is later quantified by staining the label attached to the cDNA library [@hegde_concise_2000]. Signal for a gene is computed by summarizing the signal from mutliple probes that target closeby regions [@gautier_affyanalysis_2004]. 
 
+Talk about data
+
 ### RNA sequencing
 
-RNA sequencing (RNA seq) is a much more recent method of RNA quantification. RNA seq is performed by sequencing of amplified cDNA that is acquired from a target transcriptome. Unlike microarrays they do not target specific locations on the genome hence can give a much comprehensive picture of the transcriptome including gene discovery and splicing variant identification. The quantification done by normalizing the number of reads found from a single transcript to the length of the transcript and to the total number of transcripts [@wang_rna-seq_2009]. In general RNA seq is more prone to technical artifacts due to the schotasticity of the sequencing process **citation**. Increasing the sequencing depth and using unique labels for molecules before any amplification are ways developed to aleviate such artifacts. With development of microfluidics it became possible for RNA sequencing to be performed on single cells **citations**. Due to scarcity of the starting product, technical artifacts resulting from amplification and sequencing is more prominent **citation**. This can readily be observed by the high prominence of low signals in most single cell RNA-seq experiments **figure**
+RNA sequencing (RNA seq) is a much more recent method of RNA quantification. RNA seq is performed by sequencing of amplified cDNA that is acquired from a target transcriptome. Unlike microarrays they do not target specific locations on the genome hence can give a much comprehensive picture of the transcriptome including gene discovery and splicing variant identification. The quantification done by normalizing the number of reads found from a single transcript to the length of the transcript and to the total number of transcripts [@wang_rna-seq_2009]. In general RNA seq is more prone to technical artifacts due to the schotasticity of the sequencing process **citation**. This effect is particularly powerful for lowly expressed genes which otfen make up the majority of the data [@labaj_characterization_2011].
 
+Increasing the sequencing depth, read lengths and using unique labels for molecules before any amplification are ways developed to aleviate such artifacts. With development of microfluidics it became possible for RNA sequencing to be performed on single cells **citations**. Due to scarcity of the starting product, technical artifacts resulting from amplification and sequencing is more prominent **citation**. This can readily be observed by the high prominence of low signals in most single cell RNA-seq experiments **figure**
+
+Ta
+
+
+@labaj_characterization_2011
 
 
 ### Analysis of RNA quantification results
