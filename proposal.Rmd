@@ -10,12 +10,14 @@ output:
       number_sections: yes
       # toc: yes
       toc_depth: 2
+
 # linestretch: 2
-bibliography: MasterOfCellTypes.bib
+# bibliography: MasterOfCellTypes.bib
 fontsize: 11
 # csl: chicago-author-date.csl
 csl: nature.csl
 ---
+
 ```{r include=FALSE, cache=FALSE}
 library(knitr)
 ```
@@ -38,13 +40,29 @@ The pipeline for the project can be found in Figure \ref{fig:workflow}.
 <!-- An old version by ogan -->
 <!-- Large scale gene expression analyses constitute an important portion of studies focused on complex neurological disorders **(citations)**. Even with the recent rise of expression studies focusing on single cell types **(citations)**, a majority of such studies still use bulk tissue samples to identify differentially expressed genes **(citations)**. The main caveat of examining expression changes in whole tissues instead of single cell types is that a great deal of information is lost due to non homogeneous nature of the samples. Signals that are strong enough to be detected cannot be easily attributed to the cell types that is causing the effect, while weaker signals might not be detected at all due to unaffected cell types diluting it. Other groups attempted to attempted to capture cell type specific information by computational means in a variety of tissues, but in brain such efforts have largely been confined to major cell type groups, such as neurons, oligodendrocytes and astrocytes -->
 
-\newpage
 
-# Hypotheses and specific aims
+# Research questions and specific aims
 
-## Hypotheses
+## Research questions
 
-### Hypothesis 1: 
+### What are the specific marker genes of central nervous system (CNS) cell types?
+
+Cell types of the brain, particularly neurons are loosly defined in terms of their marker genes and properties. Most common research that focuses on cell types isolates few related cell types based based on the lab's interests and try to characterize the cells in relation to other cells they are working on [@okaty_transcriptional_2009;@sugino_molecular_2006]. Relatively few studies [@zeisel_cell_2015;@tasic_adult_2016] attempt to characterize cell types in the context of the entire brain. This creates the opportunity for taking a more comprehensive approach using the already available data in the literature.
+
+### Are mouse marker genes applicable to humans?
+
+Most available data in the literature on isolated cell types are coming from mouse cells. Whereas ideally researchers would like to have information about human makrer genes as well. It is necessary to assess how well marker genes detected in mice can be applied to humans
+
+
+### How accurately can cell type proportions be predicted with the use of marker genes?
+
+Since marker genes are specific to a cell type by nature, their expression in whole tissue samples can be used as a surrogate for cell type proportion. Even though this is not a new approach, it is necesary to show how accurate it is for brain, using our methodology.
+
+### How cell type proportions change accross neurological diseases?
+
+Many diseases of the CNS 
+
+### Can cell type specific regulatory event be detected using cell type proportion information?
 
 ## Specific aims
 
@@ -54,15 +72,14 @@ The pipeline for the project can be found in Figure \ref{fig:workflow}.
 2. Employing quality control measures to minimize intake of flawed data
 3. Making the data available in a web application
 
-### Aim 3: Identification and verification of marker genes
+### Aim 2: Identification and verification of marker genes
 
 1. Detecting cell type marker genes in a region dependent based on the localization of their expression
 2. Verify marker genes in independent datasets
 
-### Aim 4: Enumaration of cell type proportions
+### Aim 3: Enumaration of cell type proportions
 
-1. Estimate cell types
-2. later
+1. Using marker genes' expression
 
 # Background
 
@@ -98,27 +115,39 @@ A higher level analysis of RNA quantification results uses more complex methods 
 
 Isolation of single cell types is necesarry as a precursor to their proper characterization or to analyze specific cells in different conditions such as their response to diseases or chemicals. There are multiple ways to isolate the cell types of interest with varying degrees of precision and quality. Most commonly, such methods rely on one or more marker genes that is specific to the cell type, selectively isolating cells that express the marker. A well established method is  Fluorescence Activated Cell Sorting (FACS) where one or more protein or RNA is labeled to be fluorescently active, either through genetic manipulation or using in situ hybridization or labeled antibodies respectively. Cells are then gated according to specific conditions (eg. expression of a gene, absence of a gene). Another established method of isolation is Immunopanning where antibodies layered to a plate are used to hold the cell that express a specific surface marker. Finally, a relatively recent marker based isolation is Translating Ribosome Affinity Purification. This method combines the promoter of a marker gene with the coding region of L10a ribosomal subunit fused with GFP. The tissue is degraded in mass and after fixation, ribosomes marked with GFP are isolated, ensuring only translating RNAs from the target cell type are isolated **a figure for all methods. add citations** [@heiman_cell_2014]. Alternatively cells can be isolated either by relying on markers as in the previous methods or known physical characteristics by manually picking them, or by Laser Capture Microdissection (LCM).
 
-The resulting samples from each of these methods has varying purity and data quality. Trap stands out with having the worst record in purity while PAN seems to be inducing the most level of stress to the cells [@okaty_quantitative_2011].
+The resulting samples from each of these methods has varying purity and data quality. TRAP stands out with having the worst record in purity while PAN seems to be inducing the most level of stress to the cells [@okaty_quantitative_2011].
+
+## Cell type markers and their applications
+
+Marker genes are useful in many ways to understand the biology of the cell type they are specific to. Their most straightforward use is to enable researchers to differentiate between the cell type and the rest of the tissue, thus enabling further research on the cell type . A researcher can use RNA probes or protein antibodies to uniquely label a cell type **citation**. Knowing a gene to be specific also allows researchers to genetically modify the cell and add foreign sequences that will only be expressed in the specific cell type.
+
+Aside from their uses in the wetlab, marker genes are also powerful tools in computational settings. They are often use as features in deconvolution of complex tissue samples as explained the the following sections.
 
 
 ## Cell type deconvolution
 
 Expression levels obtained from whole tissues contain signals from multiple cell types. Expression profile of complex tissues can be modeled as below
 
-> $$X_{ij} = \sum_{k=1}^{K}{W_{ij}h_{kj} + e_{ij}}$$ (adapded from Shenn-Orr et. al. [-@shen-orr_cell_2010-1])
+\begin{equation} \label{eq:01}
+X_{ij} = \sum_{k=1}^{K}{W_{ij}h_{kj} + e_{ij}} 
+\end{equation} 
+(from Shenn-Orr et. al. [-@shen-orr_cell_2010-1])
 
-where $X_{ij}$ is the expression value from a complex sample for genes $j$ and sample $i$ and $W_{ik}$ is a matrix containing cell type proportions for sample $i$ and cell type $k$, and $h_{kj} is the cell type specific gene expression of cell type $k$ and gene $j$ and $e_{ij}$ representing random error. This model enables usage of various methods to attempt to acquire information about the matrix $W$ or $h$
+where $X_{ij}$ is the expression value from a complex sample for genes $j$ and sample $i$ and $W_{ik}$ is a matrix containing cell type proportions for sample $i$ and cell type $k$, and $h_{kj} is the cell type specific gene expression of cell type $k$ and gene $j$ and $e_{ij}$ representing random error. This model enables usage of various methods to attempt to acquire information about the matrix $W$ or $h$. Two main classes of deconvolution methods exist: Reference based and reference free deconvolution methods and will be explained in the next sections. Due to ease of access to both mixed samples and isolated cell types, blood has been a principle focus of deconvolution experiments [@westra_cell_2015;@newman_robust_2015;@chikina_cellcode_2015]. While deconvolution attempts in brain has been performed [@xu_cell_2013;@grange_cell-typebased_2014], deconvolution of human brains remained at a relatively superficial level that focuses on more generalized cell type groups.
 
 ### Reference based deconvolution
 
-
+Reference based deconvolution methods assume we have accurate information about the matrix $h$: expression profiles of the cell types in the tissue. This requires researchers to have data from individual cell types that make up the mixture. Most naively, reseachers try to estimate the $W$ in solving the equation \ref{eq:01} by minimizing the $e$ [@grange_cell-typebased_2014]. Without any feature selection, this requires the expression profiles at hand to be a very good match to actual expression of the cell types in the mixture. This assumption might not be true due to differences between the cell type dataset and mixed tissue dataset such as gene regulation, incidence of noise or or changes in the platform. To combat such problems feature selection can be used to use the most informative parts the reference expression matrix which in turn makes the estimation process more robust [@newman_robust_2015].
 
 ### Reference free deconvolution
 
+In cases where cell type expression profiles is not available or is likely to have high level of error compared to the real expression of the cell types in the mixed sample, usage of reference free deconvolution methods might the the better alternative. A common method is to use expression of certain marker genes as a surrogate for cell type proportions. Even though the marker genes themselves are often acquired from a reference expression dataset, deconvolution is independent of their expression in the reference dataset. Often the first principle component (PC1) of the genes in the whole tissue samples are used as a surrogate [@xu_cell_2013;@chikina_cellcode_2015]. This assumes that most of the used marker genes are not differentially regulated between samples and the main source of variation is the difference between the cell type proportions in between the samples.
 
 ## Cell types of the central nervous system
 
+Brain hosts a variety of cell types that in some cases highly similar to each other while in others highly differentiated. Neurons and glias, the two main classes of cells are very different from each other in both function and morphology. Traditionaly glial cells are credited as the supporter cells of the brain **citation**. For the greater part this generalization still holds true. Oligodendrocytes are responsible for mylein formation and provide trophic support to neurons while microglia acts as the immune cells of the central nervous system. Astrocytes on the other hand both act as general purpose maintenance cells, taking up duties as maintainers of the blood brain barrier and extracelullar space, and take active roles in memory formation and regulation of synaptic transmission **citation**. 
 
+**Complete later**
 
 # References
 
