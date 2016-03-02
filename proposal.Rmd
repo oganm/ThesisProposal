@@ -206,11 +206,11 @@ Finding marker genes using independent datasets is problematic due to potential 
 
 ### Validation of marker genes via in situ hybridization
 
-We are currently in process of validating the marker genes we found by in situ hybridization on mouse brains. We will be using double labelling in situ hybridization to see if some of your marker genes co-exist with known markers of certain cell types.
+We are currently in process of validating the marker genes we found by in situ hybridization on mouse brains. We will be using double labelling in situ hybridization to see if some of your marker genes co-exist with known markers of certain cell types. This will ensure that, at least a subset of our marker genes are useful as biomarkers of specific cell types.
 
 ### Validation of marker genes in mouse and human single cell data
 
-Since it is not possible to apply biological validation methods to all marker genes that we selected, we are using single cell RNA-sequencing datasets to validate our findings. 
+Since it is not possible to apply biological validation methods to all marker genes that we selected, we are using single cell RNA-sequencing datasets to validate our finding. These data sets are coming from a recent outburst of various labs' efforts to characterize the cell types of the brain. The studies attempt to define cell types from the ground up by using a variety of clustering methods. Due to the high granularity of the clusters resulting from clustering of the single cell data, it is not straightforward to match which individual cells should match the cell types defined in our data. To combat this, we tried to validate our marker genes in a cell type agnostic way. For all of our marker gene sets, we checked to see if the genes are more coexpressed than average based on a null distribution of genes with similar prevelance in the dataset. For most gene sets this gave favorable results. Since single cell expression analysis is still in it's infancy, often the transcript counts for most genes end up being really low, which makes the exact expression value an unreliable measure. To combat this, instead of using the full expression values, we converted the data into a binary matrix where 0 meant no expression of the gene and 1 meant any expression of the gene. This approach potentially biases the results against us since we do not chose genes based on their exlusivity to a single cell type, but its hightened expression.
 
 
 
