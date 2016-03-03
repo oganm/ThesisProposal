@@ -80,7 +80,7 @@ There has been a recent surge in single cell RNA sequencing experiments attempti
 
 1. Detecting cell type marker genes in a region dependent based on the localization of their expression
 2. Verify marker genes in independent datasets and by in situ hybridization
-3. 
+3. Asses the concordance of single cell RNA seq data with each other and with the cell types in our database
 
 ### Aim 3: Enumaration of cell type proportions 
 
@@ -88,6 +88,7 @@ There has been a recent surge in single cell RNA sequencing experiments attempti
 2. Look for generalizable effects in conditions such as neurological diseases.
 3. Use datasets on neurological diseases with known effects on cell type composition as positive controls to validate enumeration method
 4. Use and independent dataset of isolated blood cell types and manually enumerated blood samples to repeat and validate the enumeration method.
+5. Create an R package for easy application of the method by third parties.
 
 ### Aim 4: Find cell type specific regulatory events with the help of enumaration information 
 
@@ -210,10 +211,17 @@ We are currently in process of validating the marker genes we found by in situ h
 
 ### Validation of marker genes in mouse and human single cell data
 
-Since it is not possible to apply biological validation methods to all marker genes that we selected, we are using single cell RNA-sequencing datasets to validate our finding. These data sets are coming from a recent outburst of various labs' efforts to characterize the cell types of the brain. The studies attempt to define cell types from the ground up by using a variety of clustering methods. Due to the high granularity of the clusters resulting from clustering of the single cell data, it is not straightforward to match which individual cells should match the cell types defined in our data. To combat this, we tried to validate our marker genes in a cell type agnostic way. For all of our marker gene sets, we checked to see if the genes are more coexpressed than average based on a null distribution of genes with similar prevelance in the dataset. For most gene sets this gave favorable results. Since single cell expression analysis is still in it's infancy, often the transcript counts for most genes end up being really low, which makes the exact expression value an unreliable measure. To combat this, instead of using the full expression values, we converted the data into a binary matrix where 0 meant no expression of the gene and 1 meant any expression of the gene. This approach potentially biases the results against us since we do not chose genes based on their exlusivity to a single cell type, but its hightened expression.
+Since it is not possible to apply biological validation methods to all marker genes that we selected, we are using single cell RNA-sequencing datasets to validate our finding. These data sets are coming from a recent outburst of various labs' efforts to characterize the cell types of the brain. The studies attempt to define cell types from the ground up by using a variety of clustering methods. Due to the high granularity of the clusters resulting from clustering of the single cell data, it is not straightforward to match which individual cells should match the cell types defined in our data. To combat this, we tried to validate our marker genes in a cell type agnostic way. For all of our marker gene sets, we checked to see if the genes are more coexpressed than average based on a null distribution of genes with similar prevelance in the dataset. For most gene sets this gave favorable results. Since single cell expression analysis is still in it's infancy, often the transcript counts for most genes end up being really low, which makes the exact expression value an unreliable measure. To combat this, instead of using the full expression values, we converted the data into a binary matrix where 0 meant no expression of the gene and 1 meant any expression of the gene. This approach potentially biases the results against us since we do not chose genes based on their exlusivity to a single cell type, but its hightened expression in the cell type.
 
+We used this method in single cell RNA-seq datasets from mouse [@zeisel_cell_2015] and human [@darmanis_survey_2015] and in both cases, we were able to see enriched coexpression in a majority of our gene sets **RNA-seq coexpression figures**. We will later add a more recently published RNA-seq study done on mouse brains that isolates single cells in a more cell type specific manner [@tasic_adult_2016].
 
+### Validation of marker genes in human whole tissue data
 
+As another validation method, we analysed the coexpression of marker gene sets in whole tissue data in a dataset [@trabzuni_widespread_2013] containing tissues that houses the cell type. Since marker gene sets are cell type specific, in a complex tissue, variation in the amount of the said cell type is determinant of their expression (eg. if a sample has higher amount of a given cell type, expression of the marker genes for that cell type will be all higher). This will result in increased coexpression of marker genes in whole tissue datasets since all samples will have some variability in cell type proportions. We compared the overall level of coexpression in between these samples to coexpression levels of randomly selected genes to see if it is higher. The results **figure** were comparable to the ones we got from human RNA-seq data.
+
+### Asses condordance of single cell RNA-seq studies with each other and to microarray samples in our database
+
+The high frequency of recently published RNA-seq studies create a large output of data that are very similar to each other by nature. All of them are cells from the brains of the same organism, hence in ideal conditions, the cell types they identify should overlap with each other and our microarray dataset. Due to the inherent differences in the data structure, assesing repeatability of such single cell studies is not straigtforward to do. We aim to capture similarities between individual cells from RNA-seq datasets and samples from the microarray database by using commong genes that are captured by all of them in an expression independent manner. For microarray data we will be using absance presence calls based on an expression threshold and for RNA-seq, we will be looking to see if the gene is captured at all in the sample. We are hoping that this anaylsis will provide sufficient information to correlate samples  **(pipeline figure for this mess)**
 
 
 # References 
