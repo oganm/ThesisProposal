@@ -243,7 +243,7 @@ Future work will focus on characterizing the genes that do not perform well accr
 
 ## Use enumeration information to improve accuracy of differential expression analysis
 
-Basic differential expression analyses on whole tissues have problems due to the heterogenicity of the sample. Since effects are often specific to cell types, having uneffected cell types in the sample will reduce the observed difference, making it harder to get significance.. Previous work shows that it is possible to increase the power of differential expression analysis by adding estimated cell type proportions as covariates [chikina_cellcode_2015]. They also show observed effects can be localized to their cell types. In neuroscience, where sample sizes are often small and data quality is not top notch, this approach had the potential to increase the value of the existing data to a great extent.
+Basic differential expression analyses on whole tissues have problems due to the heterogenicity of the sample. Since effects are often specific to cell types, having uneffected cell types in the sample will reduce the observed difference, making it harder to get significance.. Previous work shows that it is possible to increase the power of differential expression analysis by adding estimated cell type proportions as covariates [chikina_cellcode_2015]. They also show observed effects can be localized to their cell types by using the estimated proportions **complete zis**. In neuroscience, where sample sizes are often small and data quality is not top notch, this approach had the potential to increase the value of the existing data to a great extent.
 
 ## Create an R package for easy application of the method by third parties.
 
