@@ -249,6 +249,6 @@ Basic differential expression analyses on whole tissues have problems as a . Pre
 
 The pipeline for gene selection and enumeration is while relatively simple, it is time consuming to deal with the magnitude steps aiming to fine tune the process. By turning creating an R package we aim for our process to be reproducible by third parties. The package will include streamlined functions to select and validate the marker genes, along with functions used in enumeration process. The package will be publicly available on Bioconductor, CRAN or Github platforms.
 
-
+AS
 
 # References 
