@@ -243,7 +243,7 @@ Future work will focus on characterizing the genes that do not perform well accr
 
 ## Use enumeration information to improve accuracy of differential expression analysis
 
-Basic differential expression analyses on whole tissues are problematic because they have a known covariate that is rarely accounted for. Previous work shows that it is possible to increase the power of differential expression analysis [chikina_cellcode_2015]
+Basic differential expression analyses on whole tissues have problems as a . Previous work shows that it is possible to increase the power of differential expression analysis [chikina_cellcode_2015]
 
 ## Create an R package for easy application of the method by third parties.
 
