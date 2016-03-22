@@ -1,10 +1,80 @@
 \newpage
 
+\section{Tables}
+
+\begin{table}[here]
+\begin{center}
+\begin{tabular}{l|c|c|c|c|c|c|c}
+\hline
+  & FACS & LCM & Manual & PAN & PAN.FACS & TRAP & Studies\\
+\hline
+Astrocyte & ✔ &  &  &  & ✔ &  & 2\\
+\hline
+Basket &  &  & ✔ &  &  & ✔ & 2\\
+\hline
+Bergmann &  &  &  &  &  & ✔ & 1\\
+\hline
+CerebGranule &  &  &  &  &  & ✔ & 1\\
+\hline
+Cholin &  &  &  &  &  & ✔ & 2\\
+\hline
+DentateGranule &  & ✔ &  &  &  &  & 1\\
+\hline
+Dopaminergic &  & ✔ &  &  &  &  & 2\\
+\hline
+Ependymal & ✔ &  &  &  &  &  & 1\\
+\hline
+GabaPV &  &  & ✔ &  &  &  & 3\\
+\hline
+GabaReln &  &  & ✔ &  &  &  & 1\\
+\hline
+GabaRelnCalb &  &  & ✔ &  &  &  & 1\\
+\hline
+GabaSSTReln &  &  & ✔ &  &  &  & 1\\
+\hline
+GabaVIPReln &  &  & ✔ &  &  &  & 1\\
+\hline
+Gluta &  &  & ✔ &  &  &  & 1\\
+\hline
+Golgi &  &  &  &  &  & ✔ & 1\\
+\hline
+Hypocretinergic &  &  &  &  &  & ✔ & 1\\
+\hline
+Microglia & ✔ &  &  &  &  &  & 1\\
+\hline
+MotorCholin &  &  &  &  &  & ✔ & 1\\
+\hline
+Oligo &  &  &  & ✔ &  & ✔ & 4\\
+\hline
+Purkinje &  & ✔ & ✔ &  &  & ✔ & 6\\
+\hline
+PyramidalCorticoThalam &  &  & ✔ &  &  &  & 1\\
+\hline
+Pyramidal\_Glt\_25d2 &  &  &  &  &  & ✔ & 1\\
+\hline
+Pyramidal\_S100a10 &  &  &  &  &  & ✔ & 1\\
+\hline
+Pyramidal\_Thy1 &  &  & ✔ &  &  &  & 1\\
+\hline
+Serotonergic &  &  &  &  &  & ✔ & 1\\
+\hline
+Spiny &  &  &  &  &  & ✔ & 4\\
+\hline
+Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
+\hline
+\end{tabular}
+
+\caption{A summarization of the datasets collected. Check marks show the methods used to isolate cell types. Number of studies that contain the cell type are given on the right.}
+\label{table:dataTable}
+\end{center}
+\end{table}
+
+
 \section{Figures}
 
 \begin{figure}[here]
 \begin{center}
-  \includegraphics[height = 6in]{figures/Pipeline.png}
+  \includegraphics[height = 8in]{figures/pipeline.png}
   \caption{Workflow of the project} % what will appear in index
   \label{fig:workflow}
 \end{center}
@@ -21,15 +91,15 @@
 
 \begin{figure}[here]
 \begin{center}
-  \includegraphics[height = 6in]{figures/isolationMethods.png}
-  \caption{Example representations of cell type isolation techniques. A. Adapted from Kang et al. 2011 \cite{kang_embryonic_2011}. An example application of FACS. CDy1 positivity is used to isolate the target cell types, which are pluripotent stem cells. B. Adapted from Cahoy et al. 2008 \cite{cahoy_transcriptome_2008}. Immunopanning is used to remove oligodendrocytes from the cell mixture. C. Adapted from Sanz et al. 2009 \cite{sanz_cell-type-specific_2009} A schematic representation of the TRAP method. D. Adapted from Liotta et al. 2000.  \cite{liotta_molecular_2000} A schematic representation of LCM method.}
+  \includegraphics[height = 7in]{figures/isolationMethods.png}
+  \caption{Example representations of cell type isolation techniques. A. Adapted from Kang et al. 2011. An example application of FACS. CDy1 positivity is used to isolate the target cell types, which are pluripotent stem cells. B. Adapted from Cahoy et al. 2008. Immunopanning is used to remove oligodendrocytes from the cell mixture. C. Adapted from Sanz et al. 2009. A schematic representation of the TRAP method. D. Adapted from Liotta et al. 2000. A schematic representation of LCM method.}
   \label{fig:isolationMethods}
 \end{center}
 \end{figure}
 
 \begin{figure}[here]
 \begin{center}
-  \includegraphics[height = 3in]{figures/pre-quantile.png}
+  \includegraphics[height = 4in]{figures/pre-quantile.png}
   \caption{Distribution of expression levels in between samples before quantile normalization. Different colors represent different studies included in the dataset}
   \label{fig:pre-quantile}
 \end{center}
@@ -37,7 +107,7 @@
 
 \begin{figure}[here]
 \begin{center}
-  \includegraphics[height = 3in]{figures/after-quantile.png}
+  \includegraphics[height = 4in]{figures/after-quantile.png}
   \caption{Distribution of expression levels in between samples after quantile normalization. Different colors represent different studies included in the dataset}
   \label{fig:after-quantile}
 \end{center}
@@ -51,6 +121,33 @@
 \end{center}
 \end{figure}
 
+
+\begin{figure}[here]
+\begin{center}
+  \includegraphics[height = 4in]{figures/cortexGenes.png}
+  \caption{Expression of marker genes detected from cortex cell types. Values are scaled to be between 0 and 1, 0 representing the lowest observed expression level for the gene while 1 representing the highest. Samples and genes follow the same order of cell types to emphasize the specificity of the selected genes}
+  \label{fig:cortexGenes}
+\end{center}
+\end{figure}
+
+\begin{figure}[here]
+\begin{center}
+  \includegraphics[height = 6in]{figures/allenValidate.png}
+  \caption{Expression of known marker genes and newly discovered marker genes in Allen Brain Atlas (Lein et al. 2007) mouse brain in situ hybridization database. A. Expression of new and known markers of purkinje cells in cerebellum. B. Expression of new and known markers of granule cells in dentate gyrus, granule cell layer}
+  \label{fig:allenValidate}
+\end{center}
+\end{figure}
+
+\begin{figure}[here]
+\begin{center}
+  \includegraphics[height = 6in]{figures/singleCellCoexp.png}
+  \caption{Binary heatmaps representing the expression of marker genes in single human and mouse cells. Significance stars represent the difference between coexistance of the genes and randomly selected gene sets with similar prevelance in the dataset. a-j shows the expression of marker genes in mouse single cells (Zeisel et al. 2015). k-t shows the expression of marker genes in single human cells (Darmanis et al. 2015). Since the data is collected specifically from frontal cortex, only cortex cell types are tested.}
+  \label{fig:singleCellCoexp}
+\end{center}
+\end{figure}
+
+
+
 \begin{figure}[here]
 \begin{center}
   \includegraphics[height = 4in]{figures/whole-coexpression.png}
@@ -58,3 +155,55 @@
   \label{fig:whole-coexpression}
 \end{center}
 \end{figure}
+
+
+\begin{figure}[here]
+\begin{center}
+  \includegraphics[height = 6in]{figures/concordance.png}
+  \caption{Pipeline for the upcoming analyisis on concordance of different cell type based analysis studies.}
+  \label{fig:concordance}
+\end{center}
+\end{figure}
+
+\begin{figure}[here]
+\begin{center}
+  \includegraphics[height = 6in]{figures/cortexWhite.png}
+  \caption{Estimations of cortical cell types in frontal cortex and white matter. Values are normalized to be between 0 and 1}
+  \label{fig:cortexWhite}
+\end{center}
+\end{figure}
+
+\begin{figure}[here]
+\begin{center}
+  \includegraphics[height = 4in]{figures/purkinjeCereb.png}
+  \caption{Estimations of purkinje cells in different brain regions. Values are normalized to be between 0 and 1}
+  \label{fig:purkinjeCereb}
+\end{center}
+\end{figure}
+
+\begin{figure}[here]
+\begin{center}
+  \includegraphics[height = 4in]{figures/parkinsonMale.png}
+  \caption{Estimations of dopaminergic cells in different substantia nigra of male parkinson's disease patients. Values are normalized to be between 0 and 1}
+  \label{fig:parkinsonMale}
+\end{center}
+\end{figure}
+
+\begin{figure}[here]
+\begin{center}
+  \includegraphics[height = 6in]{figures/lm11MouseHumanSwap.png}
+  \caption{A-B. Expression of the genes selected from a species in the samples used for isolation from the same species. A shows human genes in human cell type specific expression profile dataset while B is mouse genes in mouse cell type specific expression profile dataset. C-D. Expression of homologues of the genes selected from a species in cell type specific expression profile dataset of the other species. C shows human marker gene expressio in mouse samples while D shows mouse marker gene expression in human samples.}
+  \label{fig:lm11MouseHumanSwap}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[here]
+\begin{center}
+  \includegraphics[height = 6in]{figures/lm11Estimations.png}
+  \caption{Correlations of estimations done by marker genes (black) and Cibersort (red) to real cell counts of the samples. Left axis shows our estimation values scaled between 0 and 1. Left axis shows Cibersort's estimate which is a percentage. A. Estimations done using marker genes selected from human cell type expression profiles. B. Estimations done using marker genes selected from mouse cell type expression profiles.}
+  \label{fig:lm11Estimations}
+\end{center}
+\end{figure}
+
+

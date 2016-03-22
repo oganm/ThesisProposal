@@ -5,6 +5,9 @@
 % this makes list of figures appear in table of contents
 \usepackage[nottoc]{tocbibind}
 
+% for passing temporary notes
+\usepackage{todonotes}
+
 % this makes dots in table of contents
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 % to change the title of contents
@@ -16,6 +19,9 @@
 %\usepackage{lineno}
 %\linenumbers
 
+% this allows checkmarks in the file
+\usepackage{amssymb}
+\DeclareUnicodeCharacter{2714}{\checkmark}
 
 % to be able to include latex comments
 \newenvironment{dummy}{}{}
