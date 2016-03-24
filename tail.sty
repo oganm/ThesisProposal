@@ -90,44 +90,44 @@ Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
 
 
 
-\begin{figure}[here]
-\begin{center}
-  \includegraphics[height = 3in]{figures/RNAseq noise.png}
-  \caption{Taken from RNA sequencing shows low repeatability at low levels (Łabaj et al. 2011): Ranks of expression values for two indepent replicates are shown. Left figure left figure shows unmodified ranks. Right figure adds jitter to the points to reveal overplotting on the edges. The sample is taken from liver tissue}
-  \label{fig:labaj}
-\end{center}
-\end{figure}
+% \begin{figure}[here]
+% \begin{center}
+%   \includegraphics[height = 3in]{figures/RNAseq noise.png}
+%   \caption{Taken from RNA sequencing shows low repeatability at low levels (Åabaj et al. 2011): Ranks of expression values for two indepent replicates are shown. Left figure left figure shows unmodified ranks. Right figure adds jitter to the points to reveal overplotting on the edges. The sample is taken from liver tissue}
+%   \label{fig:labaj}
+% \end{center}
+% \end{figure}
 
 
 
 \begin{figure}[here]
 \begin{center}
   \includegraphics[height = 7in]{figures/isolationMethods.png}
-  \caption{Example representations of cell type isolation techniques. A. Adapted from Kang et al. 2011. An example application of FACS. CDy1 positivity is used to isolate the target cell types, which are pluripotent stem cells. B. Adapted from Cahoy et al. 2008. Immunopanning is used to remove oligodendrocytes from the cell mixture. C. Adapted from Sanz et al. 2009. A schematic representation of the TRAP method. D. Adapted from Liotta et al. 2000. A schematic representation of LCM method.}
+  \caption{Example representations of cell type isolation techniques. A. Adapted from Kang et al. 2011. An example application of FACS. A fluorescently active molecule is used to label specific cell in the population. Upon detection of fluorescence, a charge is placed on the droplet whose path is later manipulated by an electrical field to separate the cells. B. Adapted from Cahoy et al. 2008. An example application of TRAP. A cell suspension is placed into a plate with bounded antibodies binding to a specific cell type. Removing suspended cells removes the cell type from the population. C. Adapted from Sanz et al. 2009. A schematic representation of the TRAP method. A cell type specific promoter driven expression of a labelled ribosome component causes certain cells to contain labelled ribosomes. The tissue is homogenized as a whole and fixed. Labelled ribosomes that carry RNAs from specific cells are isolated. Removal of ribosomes leaves cell type specific RNA samples behind. D. Adapted from Liotta et al. 2000. A schematic representation of LCM method. Cells are visually identified on the slide and marked. A laser then cuts the marked part and separates it from the rest of the samples.}
   \label{fig:isolationMethods}
 \end{center}
 \end{figure}
 
-\begin{figure}[here]
-\begin{center}
-  \includegraphics[height = 4in]{figures/pre-quantile.png}
-  \caption{Distribution of expression levels in between samples before quantile normalization. Different colors represent different studies included in the dataset}
-  \label{fig:pre-quantile}
-\end{center}
-\end{figure}
+% \begin{figure}[here]
+% \begin{center}
+%   \includegraphics[height = 4in]{figures/pre-quantile.png}
+%   \caption{Distribution of expression levels in between samples before quantile normalization. Different colors represent different studies included in the dataset}
+%   \label{fig:pre-quantile}
+% \end{center}
+% \end{figure}
 
-\begin{figure}[here]
-\begin{center}
-  \includegraphics[height = 4in]{figures/after-quantile.png}
-  \caption{Distribution of expression levels in between samples after quantile normalization. Different colors represent different studies included in the dataset}
-  \label{fig:after-quantile}
-\end{center}
-\end{figure}
+% \begin{figure}[here]
+% \begin{center}
+%   \includegraphics[height = 4in]{figures/after-quantile.png}
+%   \caption{Distribution of expression levels in between samples after quantile normalization. Different colors represent different studies included in the dataset}
+%   \label{fig:after-quantile}
+% \end{center}
+% \end{figure}
 
 \begin{figure}[here]
 \begin{center}
   \includegraphics[height = 3in]{figures/neuroexpresso.png}
-  \caption{A screenshot of the NeuroExpresso web application}
+  \caption{A screenshot of the NeuroExpresso web application: A tool to visualize gene expression in the cell types of our database.}
   \label{fig:neuroexpresso}
 \end{center}
 \end{figure}
@@ -136,7 +136,7 @@ Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
 \begin{figure}[here]
 \begin{center}
   \includegraphics[height = 4in]{figures/cortexGenes.png}
-  \caption{Expression of marker genes detected from cortex cell types. Values are scaled to be between 0 and 1, 0 representing the lowest observed expression level for the gene while 1 representing the highest. Samples and genes follow the same order of cell types to emphasize the specificity of the selected genes}
+  \caption{Expression of marker genes detected from cortex cell types. Values are scaled to be between 0 and 1, 0 representing the lowest observed expression level for the gene while 1 representing the highest. Samples and genes follow the same order of cell types to emphasize the specificity of the selected genes.}
   \label{fig:cortexGenes}
 \end{center}
 \end{figure}
@@ -148,6 +148,18 @@ Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
   \label{fig:allenValidate}
 \end{center}
 \end{figure}
+
+
+\begin{figure}[here]
+\begin{center}
+  \includegraphics[height = 8in]{figures/hybridizationValidation.png}
+  \caption{Triple labeling of fast spiking gabaergic cells in mouse cortex. NeuroTrace is a general neuronal marker. Slc32a1 and Pvalb are known markers of fast spiking pyramidal genes. Cox6a2 is a marker gene discovered through our analysis. Last row shows superimposition of known markers and Cox6a2 which appear in the same cells.}
+  \label{fig:hybridizationValidation}
+\end{center}
+\end{figure}
+
+
+
 
 \begin{figure}[here]
 \begin{center}
@@ -179,7 +191,7 @@ Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
 \begin{figure}[here]
 \begin{center}
   \includegraphics[height = 6in]{figures/cortexWhite.png}
-  \caption{Estimations of cortical cell types in frontal cortex and white matter. Values are normalized to be between 0 and 1}
+  \caption{Estimations of cortical cell types in frontal cortex and white matter. Values are normalized to be between 0 and 1. Estimations appropriately reflect expected differences between white and gray matter for the most part. It is also possible to see some unexpected increase of some pyramidal subtypes.}
   \label{fig:cortexWhite}
 \end{center}
 \end{figure}
@@ -187,7 +199,7 @@ Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
 \begin{figure}[here]
 \begin{center}
   \includegraphics[height = 4in]{figures/purkinjeCereb.png}
-  \caption{Estimations of purkinje cells in different brain regions. Values are normalized to be between 0 and 1}
+  \caption{Estimations of purkinje cells in different brain regions. Values are normalized to be between 0 and 1. Purkinje cells are specific to the cerebellum.}
   \label{fig:purkinjeCereb}
 \end{center}
 \end{figure}
@@ -195,7 +207,7 @@ Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
 \begin{figure}[here]
 \begin{center}
   \includegraphics[height = 4in]{figures/parkinsonMale.png}
-  \caption{Estimations of dopaminergic cells in different substantia nigra of male parkinson's disease patients. Values are normalized to be between 0 and 1}
+  \caption{Estimations of dopaminergic cells in different substantia nigra of male parkinson's disease patients. Values are normalized to be between 0 and 1. Dopaminergic cell loss is an expected consequence of Parkinson's Disease}
   \label{fig:parkinsonMale}
 \end{center}
 \end{figure}
@@ -211,8 +223,8 @@ Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
 
 \begin{figure}[here]
 \begin{center}
-  \includegraphics[height = 6in]{figures/lm11Estimations.png}
-  \caption{Correlations of estimations done by marker genes (black) and Cibersort (red) to real cell counts of the samples. Left axis shows our estimation values scaled between 0 and 1. Left axis shows Cibersort's estimate which is a percentage. A. Estimations done using marker genes selected from human cell type expression profiles. B. Estimations done using marker genes selected from mouse cell type expression profiles.}
+  \includegraphics[height = 8in]{figures/lm11Estimations.png}
+  \caption{Estimations done by our method (black) and Cibersory (red) are plotted against the real cell counts from the samples. Left axis shows our estimation values scaled between 0 and 1. Left axis shows Cibersort's estimate which is a percentage. A. Estimations done using marker genes selected from human cell type expression profiles. B. Estimations done using marker genes selected from mouse cell type expression profiles.}
   \label{fig:lm11Estimations}
 \end{center}
 \end{figure}
