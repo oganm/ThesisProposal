@@ -97,46 +97,6 @@ There has been a recent surge in single cell RNA sequencing experiments attempti
 
 # Background 
 
-## Expression profiling 
-
-### Microarrays 
-
-RNA microarray is the most common way to quantify RNA in a high-throughput manner and it's development have been a transformative force in many branches of biology [@hoheisel_microarray_2006]. Microarrays are built by planting single strand probes, that are specific to a location on a target genome, in high density, to a known location on a solid surface. These probes will later be hybridized to a labelled complementary DNA (cDNA) acquired by reverse transcription of a target transcriptome. The amount of cDNA that hybridized to a probe is later quantified by staining the label attached to the cDNA molecules [@hegde_concise_2000]. Often, multiple probes target a close-by region on the genome which are then summarized to make up the signal for a single gene [@gautier_affyanalysis_2004].
-
-<!-- Often, multiple probes target a close-by region on the genome to form a probeset that target a single gene. The standard output for most normalization techniques is a summarization of the probes that make up a probeset [@gautier_affyanalysis_2004]. -->
-
-There are a multitude of microarray platforms for researchers to chose from. These platforms primarily differ in the probes they use that can cover a different number of genes and/or cover the same genes using different sequences.
-
-Microarrays are extensively used in neurobiology as a default tool for expression analysis. A wide array of data is available both in tissue [@iwamoto_molecular_2004;@kang_spatio-temporal_2011;@torrey_stanley_2000] and isolated cell type [@okaty_transcriptional_2009;@sugino_molecular_2006;@dougherty_disruption_2013] level.
-
-A short summary of microarray methodology can be found at Figure \ref{fig:microarrayRnaSeq}.
-
-### RNA sequencing 
-
-RNA sequencing (RNA seq) is a much more recent method of RNA quantification. RNA seq is performed by sequencing of cDNA molecules that is acquired from the reverse transcription of a target transcriptome. Unlike microarrays they do not target specific genes hence can give a much comprehensive picture of the transcriptome including gene discovery and splicing variant identification. The quantification is done by normalizing the number of reads found from a single transcript to the length of the transcript and to the total number of transcripts [@wang_rna-seq_2009]. In general RNA seq is more prone to technical artifacts due to the stochasticity of the sequencing process. This effect is particularly powerful for low expressed genes which often make up the majority of the data [@labaj_characterization_2011].
-
-Recently RNA sequencing of single cells are becoming increasingly popular [@kolodziejczyk_technology_2015]. While single cell RNA seq is a powerful tool that allows characterization of individual cells in the population, due to scarcity of the starting product, technical artifacts resulting from amplification and sequencing is more prominent [@kolodziejczyk_technology_2015].
-
-RNA-seq analysis, especially single cell studies are starting to gain popularity in neuroscience [@zeisel_cell_2015;@darmanis_survey_2015]. Due to it's heterogeneous structure brain is a prime target for single cell studies that allows differentiation of individual cell types with much less concern of isolating heterogeneous samples.
-
-A short summary of RNAseq methodology can be found at Figure \ref{fig:microarrayRnaSeq}.
-
-### Analysis of RNA quantification results 
-
-Most common use of RNA quantification is to observe differential expression between two or more groups. This is done in order to find what genes are effected by certain conditions or expression is different between different cell or tissue types to a degree of statistical significance [@gautier_affyanalysis_2004;@islam_quantitative_2014;@darmanis_survey_2015]. Another common method of analysis is coexpression, where researchers attempt to identify genes that show similar changes in expression across different samples [@hughes_functional_2000]. This information is often used to derive functional relationships between the genes [@kim_gene_2001;@stuart_gene-coexpression_2003].
-
-A higher level analysis of RNA quantification results uses more complex methods to deconvolute cell type proportions as discussed in a later section.
-
-<!-- ### RNA quantification vs protein quantification -->
-<!-- \todo{The part is there since RNA levels is often just a surrogate for protein level information. and I felt necesary to state that a marker gene might not be actually translated. this also aims to justify why protein quantification was not used instead} -->
-
-<!-- In the process of central dogma, messenger RNAs, that make up the majority of the genes that researchers are interested in, are later translated into proteins. When researchers want to make inferences about the functional impact of expression changes in a gene, they often have to quantify protein levels instead since it is known that RNA levels do not always correlate with protein levels [@maier_correlation_2009]. RNA quantification experiments are still more common than protein quantification experiments due to their scalability and low cost. While RNA quantification has its limitations in terms of functional information it provides, it's analysis is still useful  -->
-
-<!-- Proteins are the main functioning units in a cell. They are the ultimate products of the central dogma the way it is traditionally described. DNA transcribing RNA and RNA is translated into proteins. Quantification of specific proteins is, while possible, much more difficult than quantification of specific RNA molecules and often not scalable to the same degree. RNA quantification on the other hand have been historically used much more frequently on a high throughput fashion particularly with the rise of microarrays and more recently RNA sequencing. A common concern about RNA quantification is that they do not always correlate with protein levels [@maier_correlation_2009]. Therefore care should be taken when considering their biological significance. -->
-
-<!-- While RNA quantification has its limitations in terms of functional information it provides, its anaylsis still provides useful information for our purposes since RNAs **1)** can still be used to label specific cell types in whole tissue samples, **2)** can be used to choose targets for protein quantificatin studies, **3)** can be  -->
-
-
 ## Major cell types of the brain
 
 Brain hosts a variety of cell types and is one of the most heterogeneous organs in the mammalian body. Alongside the major groups of cell types that is associated with it: neurons and glia, it also contains blood and endothelial cells. Below are short summaries of descriptions of major neuron and glia types that are included in our cell type specific expression database.
@@ -201,6 +161,48 @@ Reference based deconvolution methods assume we have accurate information about 
 In cases where cell type expression profiles is not available or are likely to have high level of error compared to the real expression of the cell types in the mixed sample, usage of reference free deconvolution methods might the the better alternative. A common method is to use expression of certain marker genes as a surrogate for cell type proportions [@xu_cell_2013;@chikina_cellcode_2015;@okaty_quantitative_2011;@westra_cell_2015]. Even though the marker genes themselves are often acquired from a reference expression dataset, deconvolution is independent of their expression in the reference dataset. Often the first principle component (PC1) of the genes in the whole tissue samples are used as a surrogate [@xu_cell_2013;@chikina_cellcode_2015;@tan_neuron-enriched_2013]. This assumes that most of the used marker genes are not differentially regulated between samples and the main source of variation is the difference between the cell type proportions in between samples.
 
 <!--Midbrain serotonergic cells** are known to react to pH changes [@severson_midbrain_2003] -->
+
+
+## Expression profiling 
+
+### Microarrays 
+
+RNA microarray is the most common way to quantify RNA in a high-throughput manner and it's development have been a transformative force in many branches of biology [@hoheisel_microarray_2006]. Microarrays are built by planting single strand probes, that are specific to a location on a target genome, in high density, to a known location on a solid surface. These probes will later be hybridized to a labelled complementary DNA (cDNA) acquired by reverse transcription of a target transcriptome. The amount of cDNA that hybridized to a probe is later quantified by staining the label attached to the cDNA molecules [@hegde_concise_2000]. Often, multiple probes target a close-by region on the genome which are then summarized to make up the signal for a single gene [@gautier_affyanalysis_2004].
+
+<!-- Often, multiple probes target a close-by region on the genome to form a probeset that target a single gene. The standard output for most normalization techniques is a summarization of the probes that make up a probeset [@gautier_affyanalysis_2004]. -->
+
+There are a multitude of microarray platforms for researchers to chose from. These platforms primarily differ in the probes they use that can cover a different number of genes and/or cover the same genes using different sequences.
+
+Microarrays are extensively used in neurobiology as a default tool for expression analysis. A wide array of data is available both in tissue [@iwamoto_molecular_2004;@kang_spatio-temporal_2011;@torrey_stanley_2000] and isolated cell type [@okaty_transcriptional_2009;@sugino_molecular_2006;@dougherty_disruption_2013] level.
+
+<!-- A short summary of microarray methodology can be found at Figure \ref{fig:microarrayRnaSeq}. -->
+
+### RNA sequencing 
+
+RNA sequencing (RNA seq) is a much more recent method of RNA quantification. RNA seq is performed by sequencing of cDNA molecules that is acquired from the reverse transcription of a target transcriptome. Unlike microarrays they do not target specific genes hence can give a much comprehensive picture of the transcriptome including gene discovery and splicing variant identification. The quantification is done by normalizing the number of reads found from a single transcript to the length of the transcript and to the total number of transcripts [@wang_rna-seq_2009]. In general RNA seq is more prone to technical artifacts due to the stochasticity of the sequencing process. This effect is particularly powerful for low expressed genes which often make up the majority of the data [@labaj_characterization_2011].
+
+Recently RNA sequencing of single cells are becoming increasingly popular [@kolodziejczyk_technology_2015]. While single cell RNA seq is a powerful tool that allows characterization of individual cells in the population, due to scarcity of the starting product, technical artifacts resulting from amplification and sequencing is more prominent [@kolodziejczyk_technology_2015].
+
+RNA-seq analysis, especially single cell studies are starting to gain popularity in neuroscience [@zeisel_cell_2015;@darmanis_survey_2015]. Due to it's heterogeneous structure brain is a prime target for single cell studies that allows differentiation of individual cell types with much less concern of isolating heterogeneous samples.
+
+<!-- A short summary of RNAseq methodology can be found at Figure \ref{fig:microarrayRnaSeq}. -->
+
+<!-- ### Analysis of RNA quantification results  -->
+
+<!-- Most common use of RNA quantification is to observe differential expression between two or more groups. This is done in order to find what genes are effected by certain conditions or expression is different between different cell or tissue types to a degree of statistical significance [@gautier_affyanalysis_2004;@islam_quantitative_2014;@darmanis_survey_2015]. Another common method of analysis is coexpression, where researchers attempt to identify genes that show similar changes in expression across different samples [@hughes_functional_2000]. This information is often used to derive functional relationships between the genes [@kim_gene_2001;@stuart_gene-coexpression_2003]. -->
+
+<!-- A higher level analysis of RNA quantification results uses more complex methods to deconvolute cell type proportions as discussed in a later section. -->
+
+<!-- ### RNA quantification vs protein quantification -->
+<!-- \todo{The part is there since RNA levels is often just a surrogate for protein level information. and I felt necesary to state that a marker gene might not be actually translated. this also aims to justify why protein quantification was not used instead} -->
+
+<!-- In the process of central dogma, messenger RNAs, that make up the majority of the genes that researchers are interested in, are later translated into proteins. When researchers want to make inferences about the functional impact of expression changes in a gene, they often have to quantify protein levels instead since it is known that RNA levels do not always correlate with protein levels [@maier_correlation_2009]. RNA quantification experiments are still more common than protein quantification experiments due to their scalability and low cost. While RNA quantification has its limitations in terms of functional information it provides, it's analysis is still useful  -->
+
+<!-- Proteins are the main functioning units in a cell. They are the ultimate products of the central dogma the way it is traditionally described. DNA transcribing RNA and RNA is translated into proteins. Quantification of specific proteins is, while possible, much more difficult than quantification of specific RNA molecules and often not scalable to the same degree. RNA quantification on the other hand have been historically used much more frequently on a high throughput fashion particularly with the rise of microarrays and more recently RNA sequencing. A common concern about RNA quantification is that they do not always correlate with protein levels [@maier_correlation_2009]. Therefore care should be taken when considering their biological significance. -->
+
+<!-- While RNA quantification has its limitations in terms of functional information it provides, its anaylsis still provides useful information for our purposes since RNAs **1)** can still be used to label specific cell types in whole tissue samples, **2)** can be used to choose targets for protein quantificatin studies, **3)** can be  -->
+
+
 
 
 # Aim 1: Compilation of cell type specific expression database and make it available to third parties 
