@@ -1,8 +1,7 @@
-\newpage
 
 \section{Tables}
 
-\begin{table}[here]
+\begin{table}[H]
 \begin{center}
 \begin{tabular}{l|c|c|c|c|c|c|c}
 \hline
@@ -16,7 +15,7 @@ Bergmann &  &  &  &  &  & ✔ & 1\\
 \hline
 CerebGranule &  &  &  &  &  & ✔ & 1\\
 \hline
-Cholin &  &  &  &  &  & ✔ & 2\\
+Cholinergic &  &  &  &  &  & ✔ & 2\\
 \hline
 DentateGranule &  & ✔ &  &  &  &  & 1\\
 \hline
@@ -24,15 +23,11 @@ Dopaminergic &  & ✔ &  &  &  &  & 2\\
 \hline
 Ependymal & ✔ &  &  &  &  &  & 1\\
 \hline
-GabaPV &  &  & ✔ &  &  &  & 3\\
+FS Basket (G42) &  &  & ✔ &  &  &  & 3\\
 \hline
 GabaReln &  &  & ✔ &  &  &  & 1\\
 \hline
-GabaRelnCalb &  &  & ✔ &  &  &  & 1\\
-\hline
 GabaSSTReln &  &  & ✔ &  &  &  & 1\\
-\hline
-GabaVIPReln &  &  & ✔ &  &  &  & 1\\
 \hline
 Gluta &  &  & ✔ &  &  &  & 1\\
 \hline
@@ -40,15 +35,17 @@ Golgi &  &  &  &  &  & ✔ & 1\\
 \hline
 Hypocretinergic &  &  &  &  &  & ✔ & 1\\
 \hline
+Martinotti (GIN) &  &  & ✔ &  &  &  & 1\\
+\hline
 Microglia & ✔ &  &  &  &  &  & 1\\
 \hline
 MotorCholin &  &  &  &  &  & ✔ & 1\\
 \hline
-Oligo &  &  &  & ✔ &  & ✔ & 4\\
+Oligodendrocyte &  &  &  & ✔ &  & ✔ & 1\\
 \hline
-Purkinje &  & ✔ & ✔ &  &  & ✔ & 6\\
+Purkinje &  & ✔ & ✔ &  &  & ✔ & 4\\
 \hline
-PyramidalCorticoThalam &  &  & ✔ &  &  &  & 1\\
+PyramidalCorticoThalam &  &  & ✔ &  &  &  & 6\\
 \hline
 Pyramidal\_Glt\_25d2 &  &  &  &  &  & ✔ & 1\\
 \hline
@@ -58,9 +55,11 @@ Pyramidal\_Thy1 &  &  & ✔ &  &  &  & 1\\
 \hline
 Serotonergic &  &  &  &  &  & ✔ & 1\\
 \hline
-Spiny &  &  &  &  &  & ✔ & 4\\
+Spiny &  &  &  &  &  & ✔ & 1\\
 \hline
-Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
+Th\_positive\_LC &  &  & ✔ &  &  &  & 4\\
+\hline
+VIPReln (G30) &  &  & ✔ &  &  &  & 2\\
 \hline
 \end{tabular}
 
@@ -70,11 +69,167 @@ Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
 \end{table}
 
 
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+Cell type & PMID\\
+\hline
+Doyle et al., 2008 & 19013282\\
+\hline
+Cahoy et al., 2008 & 18171944\\
+\hline
+Sugino et al., 2006 & 16369481\\
+\hline
+Okaty et al., 2009 & 19474331\\
+\hline
+Anandasabapathy et al., 2011 & 21788405\\
+\hline
+Rossner et al., 2006 & 17005859\\
+\hline
+Chung et al., 2005 & 15888489\\
+\hline
+Unpublished & NA\\
+\hline
+Beckervordersandforth et al 2010 & 21112568\\
+\hline
+Perrone-Bizzozero NI et al. 2011 & 22004431\\
+\hline
+Maze et al 2014 & 24584053\\
+\hline
+Heiman et al 2014 & 24599591\\
+\hline
+Tan et al 2013 & 24311694\\
+\hline
+Schmidt et al 2012 & 22632977\\
+\hline
+Dalal et al 2013 & 23431030\\
+\hline
+Fomchenko et al 2011 & 21754979\\
+\hline
+Bellesi et al 2013 & 24005282\\
+\hline
+Paul et al 2012 & 22754500\\
+\hline
+Galloway et al 2014 & 24986919\\
+\hline
+Dougherty et al 2013 & 23407934\\
+\hline
+Zamanian et al 2012 & 22553043\\
+\hline
+G??rlich et al 2013 & 24082085\\
+\hline
+Sugino et al. 2014 & 25232122\\
+\hline
+Phani et al. 2015 & 20462502\\
+\hline
+\end{tabular}
+\caption{Sources used in generation of the mouse brain cell type database.}
+\label{table:cellTypeCite}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]
+\renewcommand\arraystretch{0.7}
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+Reference & PMID\\
+\hline
+Toker et al. 2013 & 23420886\\
+\hline
+Maruyama et al. 2012 & 23200825\\
+\hline
+Yao et al. 2014 & 24394418\\
+\hline
+Haldar et al. & Unpublished\\
+\hline
+Menssen et al. 2009 & 19265543\\
+\hline
+Lotem et al. 2013 & 24236182\\
+\hline
+Tanaka et al. 2014 & 25236782\\
+\hline
+Li et al. 2015 & 25526089\\
+\hline
+Yao et al 2015 & 25527787\\
+\hline
+Lindvall et al. 2006 & 16764821\\
+\hline
+Moriyama et al. 2014 & 24913235\\
+\hline
+Berrien-Elliot et al. 2015 & 25516478\\
+\hline
+Tartey et al. 2014 & 25107474\\
+\hline
+McKinstry et al. 2014 & 25369785\\
+\hline
+Kramer et al. 2013 & 25931581\\
+\hline
+Kramer et al. 2014 & 25931582\\
+\hline
+Kramer et al. 2015 & 25931583\\
+\hline
+Vahl et al. 2014 & 25464853\\
+\hline
+Wang el al. & Unpublished\\
+\hline
+Holmes et al. 2015 & 25398911\\
+\hline
+Nakano et al. 2015 & 25769922\\
+\hline
+Ortutay et al. 2015 & 25926688\\
+\hline
+Yang et el al. 2015 & 26390156\\
+\hline
+Fehniger et al. 2007 & 17540585\\
+\hline
+Tomayko et al. 2008 & 18566367\\
+\hline
+Zietara et al. 2013 & 23345431\\
+\hline
+Cao et al. & Unpublished\\
+\hline
+Somervaille et al. 2009 & 19200802\\
+\hline
+Ingersoll et al. 2010 & 19965649\\
+\hline
+Guo et al. 2010 & 20703300\\
+\hline
+Laird et al. 2010 & 20974990\\
+\hline
+Konuma et al. 2011 & 21540074\\
+\hline
+Kuczma et al. 2011 & 21642545\\
+\hline
+Kaji et al. 2012 & 23027924\\
+\hline
+Jung et al. 2013 & 23248261\\
+\hline
+Shen et al. 2014 & 24572363\\
+\hline
+Petersen et al. 2012 & 22543263\\
+\hline
+Luckey et al. 2006 & 16492737\\
+\hline
+Baranek et al. 2012 & 23084923\\
+\hline
+\end{tabular}
+
+\caption{Sources used in generation of the mouse blood cell type database.}
+\label{table:bloodCite}
+\end{center}
+\end{table}
+
+
+
+
 \section{Figures}
 
 \begin{figure}[here]
 \begin{center}
-  \includegraphics[height = 8in]{figures/pipeline.png}
+  \includegraphics[height = 6.5in]{figures/pipeline.png}
   \caption{Workflow of the project} % what will appear in index
   \label{fig:workflow}
 \end{center}
@@ -153,7 +308,7 @@ Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
 \begin{figure}[here]
 \begin{center}
   \includegraphics[height = 8in]{figures/hybridizationValidation.PNG}
-  \caption{Triple labeling of fast spiking gabaergic cells in mouse cortex. NeuroTrace is a general neuronal marker. Slc32a1 and Pvalb are known markers of fast spiking pyramidal genes. Cox6a2 is a marker gene discovered through our analysis. Last row shows superimposition of known markers and Cox6a2 which appear in the same cells.}
+  \caption{Triple labeling of fast spiking gabaergic cells in mouse cortex. Experiments performed by Dr. Sibelle's group. NeuroTrace is a general neuronal marker. Slc32a1 and Pvalb are known markers of fast spiking pyramidal genes. Cox6a2 is a marker gene discovered through our analysis. Last row shows superimposition of known markers and Cox6a2 which appear in the same cells.}
   \label{fig:hybridizationValidation}
 \end{center}
 \end{figure}
@@ -164,7 +319,7 @@ Th\_positive\_LC &  &  & ✔ &  &  &  & 2\\
 \begin{figure}[here]
 \begin{center}
   \includegraphics[height = 6in]{figures/singleCellCoexp.png}
-  \caption{Binary heatmaps representing the expression of marker genes in single human and mouse cells. Significance stars represent the difference between coexistance of the genes and randomly selected gene sets with similar prevelance in the dataset. a-j shows the expression of marker genes in mouse single cells (Zeisel et al. 2015). k-t shows the expression of marker genes in single human cells (Darmanis et al. 2015). Since the data is collected specifically from frontal cortex, only cortex cell types are tested.}
+  \caption{Binary heatmaps representing the expression of marker genes in single human and mouse cells. Blue shows the existence of a gene while white shows its absance. Significance stars represent the difference between coexistance of the genes and randomly selected gene sets with similar prevelance in the dataset. a-j shows the expression of marker genes in mouse single cells (Zeisel et al. 2015). k-t shows the expression of marker genes in single human cells (Darmanis et al. 2015). Since the data is collected specifically from frontal cortex, only cortex cell types are tested.}
   \label{fig:singleCellCoexp}
 \end{center}
 \end{figure}
