@@ -3,7 +3,7 @@
 
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{*8c}
+\begin{tabular}{l*7c}
 \toprule
   & FACS & LCM & Manual & PAN & PAN.FACS & TRAP & Studies\\
 \midrule
@@ -41,155 +41,9 @@ VIPReln (G30) &  &  & ✔ &  &  &  & 2\\
 \end{center}
 \end{table}
 
-
 \begin{table}[H]
 \begin{center}
-\begin{tabular}{cc}
-\toprule
-Cell Types & p-value\\
-\midrule
-Astrocyte & p<0.001\\
-Microglia & p<0.001\\
-Oligo & p<0.001\\
-GabaPV & 0.001\\
-GabaRelnCalb & 0.015\\
-GabaVIPReln & p<0.001\\
-PyramidalCorticoThalam & p<0.001\\
-Pyramidal\_Glt\_25d2 & 0.039\\
-Pyramidal\_S100a10 & p<0.001\\
-Pyramidal\_Thy1 & 0.024\\
-\bottomrule
-\end{tabular}
-\caption{Enriched co-existence of marker genes in cortical single cell samples from mouse brains. Correlation of marker genes in a binary matrix of gene expression is compared to the correlation of randomly selected genes with matching prevalence across the dataset}
-\label{table:singleCellRNAMouse}
-\end{center}
-\end{table}
-
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{cc}
-\toprule
-Cell Types & p-value\\
-\midrule
-Astrocyte & p<0.001\\
-Microglia & p<0.001\\
-Oligo & p<0.001\\
-GabaPV & p<0.001\\
-GabaRelnCalb & p<0.001\\
-GabaVIPReln & p<0.001\\
-PyramidalCorticoThalam & 0.494\\
-Pyramidal\_Glt\_25d2 & 0.382\\
-Pyramidal\_S100a10 & 0.003\\
-Pyramidal\_Thy1 & 0.494\\
-\bottomrule
-\end{tabular}
-\caption{Enriched co-existence of marker genes in cortical single cell samples from human brains. Correlation of marker genes in a binary matrix of gene expression is compared to the correlation of randomly selected genes with matching prevalence across the dataset}
-\label{table:singleCellRNAHuman}
-\end{center}
-\end{table}
-
-
-\begin{table}[H]
-\begin{center}
-\resizebox{\textwidth}{!}{
-\begin{tabular}{ccccccc}
-\toprule
-Cell Types & UCL Dataset & Sibille Dataset & Stanley - AltarA & Stanley - Bahn & Stanley - Dobrin & Stanley - Kato\\
-\midrule
-GabaPV & 0.205 & p<0.001 & 0.116 & p<0.001 & p<0.001 & p<0.001\\
-GabaVIPReln & p<0.001 & p<0.001 & 0.268 & 0.021 & p<0.001 & 0.023\\
-PyramidalCorticoThalam & 0.724 & 0.875 & 0.8 & 0.875 & 0.809 & 0.635\\
-Pyramidal\_S100a10 & p<0.001 & p<0.001 & p<0.001 & p<0.001 & p<0.001 & p<0.001\\
-Pyramidal\_Thy1 & 0.038 & 0.04 & genes<3 & genes<3 & 0.679 & genes<3\\
-\bottomrule
-\end{tabular}}
-\caption{Enriched coexpression in cortical cell types. For each marker gene set, random gene sets are created and their co-expression levels are compared to the co-expression levels of the genes in the marker gene set. Above are the p values from a wilcox test that compares the co-expression levels between the gene sets. P values are calculated only for gene sets with more than 2 genes. For Stanley institute datasets, names provided by the institute are used to describe the datasets}
-\label{table:corticalTable}
-\end{center}
-\end{table}
-
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{cc}
-\toprule
-Cell Type & p-value\\
-\midrule
-Basket & 0.11\\
-Bergmann & p<0.001\\
-CerebGranule & 0.268\\
-Golgi & 0.679\\
-Purkinje & p<0.001\\
-\bottomrule
-\end{tabular}
-\caption{Enriched coexpression in cerebellar cell types. For each marker gene set, random gene sets are created and their co-expression levels are compared to the co-expression levels of the genes in the marker gene set. Above are the p values from a wilcox test that compares the co-expression levels between the gene sets. P values are calculated only for gene sets with more than 2 genes.}
-\label{table:cerebellarTable}
-\end{center}
-\end{table}
-
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{cc}
-\toprule
-Cell Type & p-value\\
-\midrule
-DentateGranule & p<0.001\\
-GabaSSTReln & p<0.001\\
-Pyramidal\_Thy1 & p<0.001\\
-\bottomrule
-\end{tabular}
-\caption{Enriched coexpression in hippocampal cell types.}
-\label{table:hippocampalTable}
-\end{center}
-\end{table}
-
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{cc}
-\toprule
-Cell Type & p-value\\
-\midrule
-BrainstemCholin & 0.008\\
-Dopaminergic & p<0.001\\
-Serotonergic & 0.001\\
-\end{tabular}
-\caption{Enriched coexpression in cell types of the substantia nigra.}
-\label{table:substantialTable}
-\end{center}
-\end{table}
-
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{cc}
-\toprule
-Cell Type & p-value\\
-\midrule
-GabaReln & p<0.001\\
-Hypocretinergic & 0.015\\
-ThalamusCholin & 0.001\\
-\end{tabular}
-\caption{Enriched coexpression in thalamic cell types.}
-\label{table:thalamicTable}
-\end{center}
-\end{table}
-
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{cc}
-\toprule
-Cell Type & p-value\\
-\midrule
-Astrocyte & p<0.001\\
-Microglia & p<0.001\\
-Oligo & p<0.001\\
-\end{tabular}
-\caption{Enriched coexpression in cell types found in all brain regions.}
-\label{table:allTable}
-\end{center}
-\end{table}
-
-\begin{table}[H]
-\begin{center}
-\begin{tabular}{cc}
+\begin{tabular}{lc}
 \toprule
 Cell type & PMID\\
 \midrule
@@ -226,9 +80,181 @@ Phani et al. 2015 & 20462502\\
 
 
 \begin{table}[H]
-\renewcommand\arraystretch{0.7}
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+Cell Types & p-value\\
+\midrule
+Astrocyte & p<0.001\\
+Microglia & p<0.001\\
+Oligo & p<0.001\\
+GabaPV & 0.001\\
+GabaRelnCalb & 0.015\\
+GabaVIPReln & p<0.001\\
+PyramidalCorticoThalam & p<0.001\\
+Pyramidal\_Glt\_25d2 & 0.039\\
+Pyramidal\_S100a10 & p<0.001\\
+Pyramidal\_Thy1 & 0.024\\
+\bottomrule
+\end{tabular}
+\caption{Enriched co-existence of marker genes in cortical single cell samples from mouse brains. Correlation of marker genes in a binary matrix of gene expression is compared to the correlation of randomly selected genes with matching prevalence across the dataset}
+\label{table:singleCellRNAMouse}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+Cell Types & p-value\\
+\midrule
+Astrocyte & p<0.001\\
+Microglia & p<0.001\\
+Oligo & p<0.001\\
+GabaPV & p<0.001\\
+GabaRelnCalb & p<0.001\\
+GabaVIPReln & p<0.001\\
+PyramidalCorticoThalam & 0.494\\
+Pyramidal\_Glt\_25d2 & 0.382\\
+Pyramidal\_S100a10 & 0.003\\
+Pyramidal\_Thy1 & 0.494\\
+\bottomrule
+\end{tabular}
+\caption{Enriched co-existence of marker genes in cortical single cell samples from human brains. Correlation of marker genes in a binary matrix of gene expression is compared to the correlation of randomly selected genes with matching prevalence across the dataset}
+\label{table:singleCellRNAHuman}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lcccccc}
+\toprule
+Cell Types & UCL Dataset & Sibille Dataset & Stanley - AltarA & Stanley - Bahn & Stanley - Dobrin & Stanley - Kato\\
+\midrule
+GabaPV & 0.205 & p<0.001 & 0.116 & p<0.001 & p<0.001 & p<0.001\\
+GabaVIPReln & p<0.001 & p<0.001 & 0.268 & 0.021 & p<0.001 & 0.023\\
+PyramidalCorticoThalam & 0.724 & 0.875 & 0.8 & 0.875 & 0.809 & 0.635\\
+Pyramidal\_S100a10 & p<0.001 & p<0.001 & p<0.001 & p<0.001 & p<0.001 & p<0.001\\
+Pyramidal\_Thy1 & 0.038 & 0.04 & genes<3 & genes<3 & 0.679 & genes<3\\
+\bottomrule
+\end{tabular}}
+\caption{Enriched coexpression in cortical cell types. For each marker gene set, random gene sets are created and their co-expression levels are compared to the co-expression levels of the genes in the marker gene set. Above are the p values from a wilcox test that compares the co-expression levels between the gene sets. P values are calculated only for gene sets with more than 2 genes. For Stanley institute datasets, names provided by the institute are used to describe the datasets}
+\label{table:corticalTable}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+Cell Type & p-value\\
+\midrule
+Basket & 0.11\\
+Bergmann & p<0.001\\
+CerebGranule & 0.268\\
+Golgi & 0.679\\
+Purkinje & p<0.001\\
+\bottomrule
+\end{tabular}
+\caption{Enriched coexpression in cerebellar cell types. For each marker gene set, random gene sets are created and their co-expression levels are compared to the co-expression levels of the genes in the marker gene set. Above are the p values from a wilcox test that compares the co-expression levels between the gene sets. P values are calculated only for gene sets with more than 2 genes.}
+\label{table:cerebellarTable}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+Cell Type & p-value\\
+\midrule
+DentateGranule & p<0.001\\
+GabaSSTReln & p<0.001\\
+Pyramidal\_Thy1 & p<0.001\\
+\bottomrule
+\end{tabular}
+\caption{Enriched coexpression in hippocampal cell types.}
+\label{table:hippocampalTable}
+\end{center}
+\end{table}
+
+\begin{table}[H]
 \begin{center}
 \begin{tabular}{cc}
+\toprule
+Cell Type & p-value\\
+\midrule
+BrainstemCholin & 0.008\\
+Dopaminergic & p<0.001\\
+Serotonergic & 0.001\\
+\bottomrule
+\end{tabular}
+\caption{Enriched coexpression in cell types of the substantia nigra.}
+\label{table:substantialTable}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+Cell Type & p-value\\
+\midrule
+GabaReln & p<0.001\\
+Hypocretinergic & 0.015\\
+ThalamusCholin & 0.001\\
+\bottomrule
+\end{tabular}
+\caption{Enriched coexpression in thalamic cell types.}
+\label{table:thalamicTable}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lc}
+\toprule
+Cell Type & p-value\\
+\midrule
+Astrocyte & p<0.001\\
+Microglia & p<0.001\\
+Oligo & p<0.001\\
+\bottomrule
+\end{tabular}
+\caption{Enriched coexpression in cell types found in all brain regions.}
+\label{table:allTable}
+\end{center}
+\end{table}
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+  & Estimate & Std..Error\\
+\midrule
+Intercept & 0.6527065 & 0.1775530\\
+Disease State:PD & -0.3784387 & 0.1957226\\
+Region:Medial & -0.3040865 & 0.1019972\\
+Sex:Male & 0.0510080 & 0.1926069\\
+Disease State:PD, Region:Medial & 0.4180618 & 0.1138480\\
+Disease State:PD, Sex:Male & -0.0374649 & 0.2213898\\
+Region:Medial, Sex: Male & 0.3578188 & 0.1116042\\
+Disease State:PD, Region:Medial, Sex:Male & -0.4197041 & 0.1323141\\
+\bottomrule
+\end{tabular}
+\caption{Coefficients found by the linear mixed-effect model. The estimate indicates the estimated effect size by the model. Disease State:PD is the estimated effect of having the Parkinson's disease, Region:Medial is the estimated effect of the sample being from medial substantia nigra and Sex:Male is the estimated effect of the sample being from a male patient. The later rows describe the interaction effect that describes the estimated effect of a sample satifying multiple conditions (being a male parkinson's disease sample for instance).}
+\label{table:parkinsonMixed}
+\end{center}
+\end{table}
+
+
+
+\begin{table}[H]
+\renewcommand\arraystretch{0.7}
+\begin{center}
+\begin{tabular}{lc}
 \toprule
 Reference & PMID\\
 \midrule
@@ -273,7 +299,6 @@ Luckey et al. 2006 & 16492737\\
 Baranek et al. 2012 & 23084923\\
 \bottomrule
 \end{tabular}
-
 \caption{Sources used in generation of the mouse blood cell type database.}
 \label{table:bloodCite}
 \end{center}
