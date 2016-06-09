@@ -155,7 +155,7 @@ In my work, detection of cell type markers will rely on cell type specific gene 
 Methods for estimation of cell type proportions from expression patterns 
 ------------------------------------------------------------------------------------------------------------------------
 
-Part of my efforts will be estimation of relative cell type proportions in complex tissue samples in a reference-free manner} Generally, expression profile of complex tissues can be modelled as
+Part of my efforts will be estimation of relative cell type proportions in complex tissue samples in a reference-free manner. Generally, expression profile of complex tissues can be modelled as
 
 \begin{equation} \label{eq:01}
 X_{ij} = \sum_{k=1}^{K}{W_{ij}h_{kj} + e_{ij}} 
